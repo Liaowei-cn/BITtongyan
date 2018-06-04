@@ -1,0 +1,61 @@
+/**icreate.wxss**/
+
+.ticketview{
+  background: #fff;
+  height: 215rpx;
+  padding: 10rpx;
+  margin: 0 0 20rpx 0;
+  border-bottom: solid 5rpx #ccc;
+}
+.icon {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx 0 0;
+}
+.info{
+  height: 150rpx;
+  padding: 0 20rpx 0 20rpx;
+  background: #fff;
+}
+.info .title{
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #000;
+  word-break:break-all;  
+  display:-webkit-box;  
+  -webkit-line-clamp:2;  
+  -webkit-box-orient:vertical;  
+  overflow:hidden; 
+}
+.info .timeplace{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #999;
+}
+.operate {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+.operate .id {
+  color: #ccc;
+  font-size: 26rpx;
+  width: 130rpx;
+  margin: 0 10rpx 10rpx 10rpx; 
+}
+.operate .button {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 65rpx;
+  width: 130rpx;
+  color: #fff;
+  font-size: 36rpx;
+  margin: 0 10rpx 10rpx 10rpx;
+  border-radius: 14rpx;
+  border: 1rpx solid #999;
+}

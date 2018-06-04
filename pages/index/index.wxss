@@ -1,0 +1,140 @@
+/**index.wxss**/
+.search{
+  display: flex;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #cc3300;
+}
+/* 搜索栏的身材怎么样呀？ */
+.search-left{
+  flex: 7;
+  text-align: left;
+}
+/* 搜索栏看左边！ */
+.search-left input{
+  width: 95%;
+  display: inline-block;
+  height: 65rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  padding-left: 15px;
+}
+/* 输入栏哦 */
+.search-placeholder{
+  color: #cccccc;
+  line-height: 20rpx;
+}
+/* 填点东西装个样子 */
+.search .search-right{
+  flex: 1;
+  text-align: center;
+}
+/* 搜索栏看右边！ */
+.search .search-right image{
+  display: flex;
+  align-items: center;
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx 20rpx 10rpx 10rpx;
+}
+/* 在网上扒了个图标，设计大大别告我侵权(￣▽￣)" */
+.type{
+  display: inline-block;
+  float: right;
+  font-size: 24rpx;
+  color: #666;
+  padding: 5rpx 15rpx 5rpx 15rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 30rpx;
+}
+/* 报名人数！ */
+.title text{
+  font-size: 28rpx;
+  font-weight: 700;
+  line-height: 35rpx;
+  word-break:break-all;  
+  display:-webkit-box;  
+  -webkit-line-clamp:2;  
+  -webkit-box-orient:vertical;  
+  overflow:hidden; 
+}
+/* 标题超过两行就省略 */
+.description{
+  word-break:break-all;  
+  display:-webkit-box;  
+  -webkit-line-clamp:3;  
+  -webkit-box-orient:vertical;  
+  overflow:hidden;
+}
+/* 简介超过三行就省略 */
+.progress{
+  padding: 15rpx 0 0 0;
+}
+/* 装进度条的 */
+.bar{
+  stroke-width: 20rpx;
+}
+/* 进度条 */
+.others{
+  display: flex;  
+  justify-content: space-between;
+  padding: 10rpx 0 0 0;
+}
+.left{
+  display: flex;
+  align-items: center;
+  flex: 7;
+  color: #999;
+}
+.left image{
+  width: 25rpx;
+  height: 25rpx;
+  margin: 0 10rpx 0 0;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 3;
+  font-weight: 600;
+}
+.loadmore{
+  margin: 20rpx 0 20rpx 0;
+  height: 80rpx;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #999;
+  background: #ffffff;
+  border-radius: 0;
+}
+button::after {
+  border: 0;
+}
+/* 加载动画 */
+.loadingIco {
+  width: 100rpx;
+  height: 100rpx;
+  animation: a 1s steps(12) infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -50rpx 0 0 -50rpx;
+  overflow: hidden;
+}
+@keyframes a {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+to {
+-webkit-transform: rotate(1turn);
+transform: rotate(1turn);
+}
+}
+

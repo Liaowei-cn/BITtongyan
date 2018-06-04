@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/usercenter/usercenter",
+    "pages/myticket/myticket",
+    "pages/detail/detail",
+    "pages/ticket/ticket",
+    "pages/edit/edit",
+    "pages/userinfo/userinfo",
+    "pages/icreate/icreate"
+  ],
+  "window": {
+    "backgroundColor": "#cc3300",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cc3300",
+    "navigationBarTitleText": "「研途有理」",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#aeaeae",
+    "selectedColor": "#d59783",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动广场",
+        "iconPath": "images/index1.png",
+        "selectedIconPath": "images/index2.png"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "个人中心",
+        "iconPath": "images/user_center1.png",
+        "selectedIconPath": "images/user_center2.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

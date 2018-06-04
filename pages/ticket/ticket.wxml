@@ -1,0 +1,43 @@
+<!--ticket.wxml-->
+<view class="container">
+        <view class='prompt'>
+          您已参与该活动
+        </view>
+        <view class="ticket shadow" bindtap='bindJoin'>
+            <view class="title">
+                {{activity.title}}
+            </view>
+            <view class="info">
+                姓  名：{{user.name}}
+            </view>
+            <view class="info">
+                学  号：{{user.number}}
+            </view>
+            <view class="info">
+                时  间：{{activity.date}}  {{activity.start}}-{{activity.end}}
+            </view>
+            <view class="info">
+                地  点：{{activity.place}}
+            </view>
+            <view class="qrcode" wx:if="{{activity.id}}">
+               <image src="{{qrcode}}{{activity.id}}.png"></image> 
+            </view>
+            <view>
+              <text class="notice">
+              *仅部分活动需要电子门票
+              *可在个人中心中查看门票
+              </text>
+            </view>
+        </view>
+        <view class="bottom">
+          <button class='quit' bindtap='deleteTicket'  style="background:{{background}}">
+              <text>{{text}}</text>
+          </button>
+          <button class='back' bindtap='toTickets'>
+            <text>我的门票</text>
+            <image src="{{right}}"></image> 
+          </button>
+        </view>
+        
+</view>
+

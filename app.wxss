@@ -1,0 +1,101 @@
+/**app.wxss**/
+page{
+background-color: #ebebeb;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*padding: 200rpx 0;*/
+}
+.flex-wrp{
+  display: flex;
+}
+.flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.flex-item{
+  flex-grow: 1;
+  text-align: center;
+}
+.top-tab{
+  width: 750rpx;
+  height: 100rpx;
+  background: #298DE5;
+  color: #8CCEFD;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  margin: 0 0 8rpx 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  color: #000;
+}
+.container .activity-item{
+  padding: 20rpx 30rpx 20rpx;
+  margin: 20rpx 0 0 0;
+  background: #ffffff;
+}
+.container .activity-item .activity-source{
+  width: 690rpx;
+  left: 0;
+  height: 50rpx;
+}
+.container .activity-item .activity-source a{
+  display: inline-block;
+  height: 40rpx;
+}
+.container .activity-item .activity-source .avatar{
+  position: relative;
+  display: inline-block;
+}
+.container .activity-item .activity-source .avatar image{
+  /*position: absolute;*/
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.container .activity-item .activity-source text{
+  /*position: absolute;*/
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 0 15rpx;
+  color: #aaaaaa;
+  font-size: 26rpx;
+}
+.container .activity-item .activity-content{
+  padding: 5rpx 0 0 0;
+}
+.container .activity-item .activity-content .description{
+  padding: 5rpx 0 0 0;
+  font-size: 24rpx;
+  line-height: 28rpx;
+  color: #5b5b5b;
+}
+/* 卡片分割线样式（偏右型、最后没有） */
+.imagecard .rightcard{
+    border-bottom: solid 1px #ebebeb;
+}
+.imagecard:last-child .rightcard{
+    border-bottom: none;
+}
+/* 卡片分割线样式（底部型、全有） */
+.card{
+    border-bottom: solid 1px #ebebeb;
+}
+.shadow {
+  box-shadow: 0 1rpx 3rpx #eee;
+}

@@ -1,0 +1,160 @@
+/**join.wxss**/
+.content{
+    width: 750rpx;
+    padding: 0 0 200rpx 0;
+    background: #fff;
+}
+.content .ac-title{
+    padding: 30rpx 20rpx 10rpx 20rpx;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+.gray {
+    color: #434343;
+    padding: 30rpx 45rpx 30rpx 45rpx;
+    font-size: 32rpx;
+    line-height: 45rpx;
+}
+.content .ac-source{
+    padding: 0rpx 20rpx 20rpx 20rpx;
+    display: flex;
+}
+.content .ac-source image{
+    width: 45rpx;
+    height: 45rpx;
+    border-radius: 45rpx;
+
+}
+.content .ac-source text{
+    color: #999;
+    font-size: 26rpx;
+    padding: 0 0 0 20rpx;
+    display: flex;
+    align-items: center;
+}
+.content .ac-post{
+    padding: 30rpx 0 30rpx 0;
+    text-align: center;
+}
+.content .ac-post image{
+    width: 100%;
+}
+.content .timeplace{
+    display: flex;
+    align-items: center;
+}
+.icon {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 30rpx;
+    height: 30rpx;
+    margin: 0 10rpx 0 0;
+}
+.content .ac-info{
+    text-align: justify;
+}
+.content .ac-brief{
+    text-align: justify;
+}
+.action{
+    height: 90rpx;
+    padding:10rpx 0 10rpx 0;
+}
+.action .share{
+    padding: 0 100rpx 0 100rpx;
+    flex: 1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: #fff;
+}
+.action image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+}
+button{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  font-size: 30rpx;
+  border-radius: 0;
+}
+button::after {
+  border: 0;
+}
+.bottom {
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    border-top: solid 1px #ccc;
+}
+.bottom .back {
+  flex: 25;
+  background: #fff;
+  color: #000;
+  font-size: 26rpx;
+}
+.bottom .back image {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 20rpx 0 0;
+}
+.bottom .join {
+  flex: 80;
+  color: #fff;
+  font-size: 36rpx;
+}
+.operate view{
+  width: 290rpx;
+  font-size: 40rpx;
+  padding: 15rpx 0 15rpx 0; 
+  margin:  20rpx 200rpx 20rpx 200rpx;
+  text-align: center;
+  border-radius:50px;
+  color: #fff;
+  background: #228B22;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  overflow: hidden;
+}
+.modal .showPage {
+  width: 500rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  margin: 0 0 0 -250rpx;
+  text-align: center;
+}
+.canvas {
+  border-radius: 50rpx;
+}
+.savePic {
+  margin: 20rpx 0 0 0;
+  border-radius: 100rpx;
+  background: #07c4d0;
+  color: #fff;
+}
+.close {
+  padding: 10px 20rpx 20px 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  opacity: 0.7;
+}

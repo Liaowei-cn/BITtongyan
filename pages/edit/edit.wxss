@@ -1,0 +1,81 @@
+
+.picker {
+  margin: 20rpx 0 20rpx 0;
+  background: #fff;
+}
+.textarea {
+  background: #fff;
+}
+button::after {
+  border: 0;
+}
+.picker-item{
+  display: flex;
+  padding: 20rpx 50rpx 20rpx 50rpx;
+  align-items: center;
+}
+.picker-info{
+  flex: 3;
+  color: #333;
+  font-size:16px;
+  line-height: 40px;
+} 
+.picker-text{
+  flex: 6;
+  color: #666;
+  font-size: 16px;
+  line-height: 40px;
+}
+.picker-image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.input-item{
+  padding: 20rpx 50rpx 20rpx 50rpx;
+}
+.input-info{
+  color: #333;
+  font-size:16px;
+  line-height: 40px;
+} 
+.input-text{
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  border: 1rpx solid #bbb;
+  border-radius: 10rpx;
+}
+textarea {
+  padding: 10rpx;
+}
+.notice{
+  padding: 0 0 30rpx 0;
+  font-size: 26rpx;
+  color: #999;
+}
+.upload{
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #666;
+  width: 200rpx;
+  margin: 200rpx 275rpx 0 275rpx;
+}
+.notice{
+  font-size: 28rpx;
+  color: #888;
+  padding: 0 0 200rpx 250rpx;
+}
+.create{
+    width: 100%;
+    height: 100rpx;
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1rpx solid #bbb;
+    overflow: hidden;
+    font-size: 36rpx;
+    color: #000;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 0;
+}

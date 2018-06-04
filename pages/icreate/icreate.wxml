@@ -1,0 +1,25 @@
+<!--icreate.wxml-->
+<view>
+  <block wx:for="{{feed}}" wx:key="id" wx:for-item="item">
+    <view class="ticketview shadow" id='{{item.id}}'>
+      <view class="info" bindtap='bindDetail' id='{{item.id}}'>
+        <view class="title">{{item.title}}</view>
+        <view class="timeplace">
+            <image src="{{time}}" class='icon'></image>
+            <text>活动时间：{{item.date}}  {{item.start}}-{{item.end}}</text>
+        </view>
+        <view class="timeplace">
+            <image src="{{spot}}" class='icon'></image>
+            <text>活动地点：{{item.place}}</text>
+        </view>
+      </view>
+      <view class='operate'>
+          <view class='id' hidden='{{isHidden}}'>id={{item.id}}</view>
+          <view class='button' id='{{item.id}}' style="background: rgb(128,128,128);" bindtap='DownQRcode'>二维码</view>
+          <view class='button' id='{{item.id}}' style="background: rgb(46,117,182);" bindtap='DownloadList'>名 单</view>
+          <view class='button' id='{{item.id}}' style="background: rgb(0,153,0);" bindtap='bindEdit'>编 辑</view>
+          <view class='button' id='{{item.id}}' style="background: rgb(197,90,17);" bindtap='bindDelete'>删 除</view>
+      </view>
+    </view>
+  </block>
+</view>

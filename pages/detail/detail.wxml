@@ -1,0 +1,72 @@
+<!--join.wxml-->
+<view class="container">
+  <view class="content">
+      <!-- 标题 -->
+      <view class="ac-title">
+          <text>{{activity.title}}</text>
+      </view>
+      <!-- 发布者及头像 -->
+      <view class="ac-source card">
+            <image wx:if="{{activity.organizer}}" src='{{Url}}images/{{activity.organizer}}.jpg'></image> 
+            <text>{{activity.organizer}}</text>
+      </view>
+      <!-- 海报 -->
+      <view class="ac-post card">
+           <image mode='widthFix' src="{{poster}}"></image> 
+      </view>
+      <!-- 关键信息 -->
+        <view class='timeplace card gray'>
+           <image class='icon' src="{{time}}"></image> 
+          <text>活动时间：{{activity.date}}  {{activity.start}}-{{activity.end}}</text>
+        </view>
+        <view class='timeplace card gray'>
+          <image class='icon' src="{{spot}}"></image> 
+          <text>活动地点：{{activity.place}}</text>
+        </view>
+      <!-- 其他信息 -->
+      <view class="ac-info card gray">
+          <text>{{activity.info}}</text>
+      </view>
+      <!-- 简介 -->
+      <view class="ac-brief card gray">
+          <text>{{activity.brief}}</text>
+      </view>
+      <view class="action flex-wrp card">
+        <view class="share">
+          <button bindtap='onShareAppMessage' open-type='share'>
+            <image src="{{mesShare}}"></image> 
+            <text>发 送</text>
+          </button>
+          <button bindtap='getQRcode'>
+            <image src="{{picShare}}"></image> 
+            <text>分 享</text>
+          </button>
+        </view>
+      </view>
+      <view class="bottom">
+          <button class='back' bindtap='toIndex'>
+            <image src="{{back}}"></image> 
+            <text>返 回</text>
+          </button>
+          <button class="join" bindtap='signUp' style="{{joinCSS}}">
+            <text>{{activity.bookState}}</text>
+          </button>
+      </view>
+      
+  </view>
+
+  <view class="modal" hidden="{{modalFlag}}">
+    <view class="showPage">
+      <view class='canvas'>
+          <canvas canvas-id="myCanvas" style="width: 500rpx; height: 700rpx;"/>
+      </view>
+      <button class="savePic"  bindtap='savePic'>保存图片</button>
+      <view>
+          <image bindtap='hideModal' class="close" src="{{close}}"></image>
+      </view>
+    </view>
+  </view>
+  
+  
+</view>
+

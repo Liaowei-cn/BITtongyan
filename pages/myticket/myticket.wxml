@@ -1,0 +1,15 @@
+<!--myjoin.wxml-->
+<view class="container">
+  <block wx:for="{{feed}}" wx:key="id" wx:for-item="item">
+    <view class="ticketview shadow" bindtap='bindTicket' id='{{item.id}}'>
+      <view class="state" style="background:{{item.barColor}}">
+        {{item.ticketState}}
+      </view>
+      <view class="info">
+        <view class="title">{{item.title}}</view>
+        <view class="timeplace">活动时间：{{item.date}}  {{item.start}}-{{item.end}}</view>
+        <view class="timeplace">活动地点：{{item.place}}</view>
+      </view>
+    </view>
+  </block>
+</view>

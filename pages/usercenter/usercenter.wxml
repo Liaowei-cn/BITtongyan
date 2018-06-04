@@ -1,0 +1,83 @@
+<view class="container">
+
+  <view class="user flex-wrp shadow" bindtap='bindUserInfo'>
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="edit">查看/编辑个人信息</text>
+    </view>
+  </view>
+
+  <view class="my shadow">
+    <view class="my-item flex-wrp imagecard" bindtap="scanningCode">
+      <view class="myitem-icon flex-item" >
+          <image src="{{scan}}"></image>  
+      </view>
+      <view class="myitem-name flex-item rightcard">
+        <text>扫码签到</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp imagecard" bindtap="bindViewTap">
+      <view class="myitem-icon flex-item" >
+         <image src="{{ticket}}"></image> 
+      </view>
+      <view class="myitem-name flex-item rightcard">
+        <text>我的门票</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp imagecard" bindtap="showOpin">
+      <view class="myitem-icon flex-item" >
+         <image src="{{advise}}"></image> 
+      </view>
+      <view class="myitem-name flex-item rightcard">
+        <text>意见反馈</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp imagecard" bindtap="showJoin">
+      <view class="myitem-icon flex-item" >
+         <image src="{{joinus}}"></image> 
+      </view>
+      <view class="myitem-name flex-item rightcard">
+        <text>加入我们</text>
+      </view>
+    </view>
+  </view> 
+  <view class="my shadow">
+    <view class="my-item flex-wrp imagecard" bindtap='launchActivity' hidden='{{isHidden}}'>
+      <view class="myitem-icon flex-item" >
+         <image src="{{flag}}"></image> 
+      </view>
+      <view class="myitem-name flex-item  rightcard">
+        <text>发起活动</text>
+      </view>
+    </view> 
+    <view class="my-item flex-wrp imagecard" bindtap='showMine' hidden='{{isHidden}}' id='1'>
+      <view class="myitem-icon flex-item" >
+         <image src="{{mine}}"></image> 
+      </view>
+      <view class="myitem-name flex-item  rightcard">
+        <text>我发起的</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp imagecard" bindtap='showMine' hidden='{{isHiddenMore}}' id='2'>
+      <view class="myitem-icon flex-item" >
+         <image src="{{index}}"></image> 
+      </view>
+      <view class="myitem-name flex-item  rightcard">
+        <text>全部活动</text>
+      </view>
+    </view>
+  </view> 
+</view>
+<view class='copyright' bindtap='showModal'>Copyright © 北京理工大学研究生会.</view>
+<!-- 弹出层 -->
+<view class="modal" hidden="{{modalFlag}}">
+    <view class="showPage">
+      <view class="poster">
+        <image class="posterPic" src="{{poster}}"></image>
+      </view>
+      <image bindtap='hideModal' class="close" src="{{close}}"></image>
+    </view>
+</view>

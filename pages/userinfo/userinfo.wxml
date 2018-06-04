@@ -1,0 +1,49 @@
+<!--userinfo.wxml-->
+
+<view class="input">
+        <view class="avatar flex-item">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        </view>
+
+        <view class="notice">  
+          <text >用于报名或签到，请如实填写！</text>
+        </view>
+
+        <picker bindchange="bindSchoolChange" disabled='{{disableEdit}}' value="{{indexSchool}}" range="{{school}}">
+          <view class="input-item">  
+            <text class="input-info">学  院</text>
+            <view class="input-text" style="{{borderCSS}}">
+              {{school[indexSchool]}}  
+            </view> 
+          </view> 
+        </picker>
+        
+        <form bindsubmit="saveEdit">
+          <view class="input-item">  
+            <text class="input-info">姓  名</text>
+            <view class="input-text" style="{{borderCSS}}">
+              <input type="text" value='{{name}}' disabled='{{disableEdit}}' confirm-type='done' name="name"/>  
+            </view> 
+          </view>
+
+          <view class="input-item">  
+            <text class="input-info">学  号</text>
+            <view class="input-text" style="{{borderCSS}}">
+              <input type='number' value='{{stuID}}' disabled='{{disableEdit}}' confirm-type='done' name="number"/>  
+            </view> 
+          </view>
+
+          <view class="input-item">  
+            <text class="input-info">手  机</text>
+            <view class="input-text" style="{{borderCSS}}">
+              <input type='number' value='{{phone}}' disabled='{{disableEdit}}' confirm-type='done' name="phone"/>  
+            </view> 
+          </view>
+
+          <view class="buttons">
+            <button disabled='{{disable1}}' class="button1" bindtap='editChange' style="{{button1CSS}}">编 辑</button> 
+            <button disabled='{{disable2}}' class="button2" formType="submit" style="{{button2CSS}}">保 存</button>
+          </view>
+
+        </form>
+</view>

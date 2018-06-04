@@ -1,0 +1,53 @@
+<!--index.wxml-->
+
+  <view class="search">
+      <view class="search-left">
+          <input name='key' confirm-type='search' bindconfirm='search' bindinput="keyInput" placeholder="活动广场" placeholder-class="search-placeholder"/>
+      </view>
+      <view class="search-right" bindtap='search'>
+           <image src="{{search}}"></image> 
+      </view>
+  </view>
+  
+<scroll-view class="container" scroll-y="true" bindscrolltoupper="onPullDownRefresh" upper-threshold="10" lower-threshold="5"   scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <block wx:for="{{feed}}" wx:key="id" wx:for-item="item">
+        <view class="activity-item shadow" bindtap='bindDetail' id='{{item.id}}'>
+            <view class="activity-source">
+                <a class="">
+                    <view class="avatar">
+                         <image src="{{logoUrl}}images/{{item.organizer}}.jpg"></image> 
+                    </view>
+                    <text>{{item.organizer}}</text>
+                </a>
+                <view class="type">
+                {{item.type}}
+                </view>
+            </view>
+            <view class="activity-content">
+                <view class="title">
+                  <text>{{item.title}}</text>
+                </view>
+                <view class="description">
+                    <view class="description">
+                        <text class="answer-txt">{{item.brief}}</text>
+                    </view>
+                    <view class="progress">
+                        <progress class="bar" color="{{item.barColor}}" active percent="{{100*item.now/item.total}}"></progress>
+                    </view>
+                    <view class="others">
+                        <view class="left">
+                          <image src="{{time}}"></image> 
+                          <text class='date'>{{item.date}}  {{item.start}}-{{item.end}}</text>
+                        </view>
+                        <text class='right' style="color:{{item.numColor}}">{{item.state}} {{item.now}}/{{item.total}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <button class="loadmore" bindtap='ReachBottom'>加载更多</button>
+</scroll-view>
+<!-- 加载图标 -->
+<image hidden='{{hideLoading}}' class='loadingIco' src="{{loading}}"></image>
+
+

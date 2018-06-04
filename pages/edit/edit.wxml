@@ -1,0 +1,109 @@
+<!--userinfo.wxml-->
+    <view class="input">
+<!-- 后面要改成picker-view -->
+    <view class="picker">
+        <picker bindchange="bindOrganizerChange" value="{{indexOrganizer}}" range="{{arrayOrganizer}}">
+          <view class="picker-item card">  
+            <text class="picker-info">*活动主办：</text>
+            <view class="picker-text">
+              {{arrayOrganizer[indexOrganizer]}}  
+            </view>
+            <image class='picker-image' src="{{right}}"></image> 
+          </view> 
+        </picker>
+
+        <picker bindchange="bindTypeChange" value="{{index}}" range="{{arrayType}}">
+          <view class="picker-item card">  
+            <text class="picker-info">*活动类型：</text>
+            <view class="picker-text">
+              {{arrayType[indexType]}}  
+            </view> 
+            <image class='picker-image' src="{{right}}"></image> 
+          </view> 
+        </picker>
+
+        <picker mode="date" value="{{date}}" start="2018-01-01" end="2019-12-31" bindchange="bindDateChange">
+          <view class="picker-item card">  
+            <text class="picker-info">*活动日期：</text>
+            <view class="picker-text">
+              {{date}}  
+            </view> 
+            <image class='picker-image' src="{{right}}"></image> 
+          </view> 
+        </picker>
+
+        <picker mode="time" value="{{start}}" start="00:00" end="23:59" bindchange="bindStartChange">
+          <view class="picker-item card">  
+            <text class="picker-info">*开始时间：</text>
+            <view class='picker-image' class="picker-text">
+              {{start}}
+            </view> 
+            <image class='picker-image' src="{{right}}"></image> 
+          </view> 
+        </picker>
+
+        <picker mode="time" value="{{end}}" start="00:00" end="23:59" bindchange="bindEndChange">
+          <view class="picker-item card">  
+            <text class="picker-info">*结束时间：</text>
+            <view class="picker-text">
+              {{end}} 
+            </view> 
+            <image class='picker-image' src="{{right}}"></image> 
+          </view> 
+        </picker>
+    </view>
+
+    
+        <form bindsubmit="formSubmit">
+        <view class="textarea">
+
+          <view class="input-item">  
+            <view class="input-info">*活动名称：</view>
+            <view class="input-text">
+              <textarea auto-height='true' show-confirm-bar='false' name="title" maxlength = '200'  value="{{activity.title}}"/>  
+            </view> 
+          </view>
+
+          <view class="input-item">  
+            <view class="input-info">*活动人数：</view>
+            <view class="input-text">
+              <textarea type='number' auto-height='true' placeholder='0~1000' confirm-type='done'  name="total" maxlength = '5' value="{{activity.total}}"/>  
+            </view> 
+          </view>
+          
+          <view class="input-item">  
+            <view class="input-info">*活动地点：</view>
+            <view class="input-text">
+              <textarea auto-height='true' show-confirm-bar='false'  name="place" maxlength = '20' value="{{activity.place}}"/>  
+            </view> 
+          </view>
+
+          <view class="input-item">  
+            <view class="input-info">报名须知：</view>
+            <view class="input-text">
+              <textarea auto-height='true' show-confirm-bar='false'  name="info" maxlength = '1000' value="{{activity.info}}"/>  
+            </view> 
+          </view>
+
+          <view class="input-item">  
+            <view class="input-info">详细介绍：</view>
+            <view class="input-text">
+              <textarea auto-height='true' name="brief" maxlength = '5000' value="{{activity.brief}}"/>  
+            </view> 
+          </view>
+          
+          <button class="upload" bindtap='uploadPoster'>{{posterState}}</button>
+          <view class='notice'>
+              <text>  
+                  *只能上传1张图片
+                  *仅支持jpg格式
+                  *大小不要超过2M
+              </text>
+          </view>
+
+          </view>
+
+          <button class="create" formType="submit">{{button}}</button> 
+          
+        </form>
+</view>
