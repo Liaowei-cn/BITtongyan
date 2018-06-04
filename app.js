@@ -1,4 +1,4 @@
-//app.js test 1
+//app.js
 var util = require('utils/util.js')
 
 App({
